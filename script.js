@@ -101,6 +101,10 @@ function Total() {
     for (let val of cart) {
         total = total + val.price * val.qtty;
     }
+
+    if (total >= 100) {
+        total = (total / 100) * 90;
+    }
     document.getElementById("price").innerHTML = total.toFixed(2) + " €";
 }
 
